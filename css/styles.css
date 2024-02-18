@@ -69,14 +69,39 @@ body {
   .navlinks li {
     margin: 0 20px;
   }
+
+  /* Active navlink page */
+  .active-link {
+    display: none;
+  }
   
   .navlinks a {
     text-decoration: none;
+    display: inline-block;
+    position: relative;
     color: var(--air-force-blue);
+  }
+
+  .navlinks a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--air-force-blue-lighter);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
   }
 
   .navlinks a:hover {
     color: var(--air-force-blue-lighter);
+  }
+
+  .navlinks a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
   }
   
   /* Not used, maybe later.
