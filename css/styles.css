@@ -26,6 +26,12 @@ body {
     min-height: 100vh; /* Adjust the height as needed */
 }
 
+@media (max-width: 1150px) {
+  .video-container {
+    padding-bottom: 80px;
+  }
+}
+
 .video-container video {
     position: absolute;
     top: 0;
@@ -47,13 +53,16 @@ main {
   padding: 70px;
   margin: 120px auto 0 auto;
   width: 60%;
-  background-color: rgba(47, 57, 66, 0.527);
   color: white;
   border-radius: 28px;
   display: flex;
   flex-direction: column;
   align-items: center;
   backdrop-filter: blur(6px);
+  border: double 3px transparent;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.514), rgba(22, 25, 27, 0.514)), radial-gradient(circle at top left, rgba(129, 180, 199, 0.356),#10131460);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
 }
 
   .profile-picture {
