@@ -4,7 +4,6 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow: hidden;
     font-family: "Quicksand", sans-serif;
     font-size: 62.5%;
     font-size: 20px;
@@ -24,8 +23,7 @@ body {
 .video-container {
     position: relative;
     width: 100%;
-    height: 100vh; /* Adjust the height as needed */
-    overflow: hidden;
+    min-height: 100vh; /* Adjust the height as needed */
 }
 
 .video-container video {
@@ -49,12 +47,13 @@ main {
   padding: 70px;
   margin: 120px auto 0 auto;
   width: 60%;
-  background-color: rgba(47, 57, 66, 0.842);
+  background-color: rgba(47, 57, 66, 0.527);
   color: white;
   border-radius: 28px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  backdrop-filter: blur(6px);
 }
 
   .profile-picture {
@@ -62,6 +61,7 @@ main {
     height: auto;
     margin-right: 20px;
     border-radius: 75px;
+    filter:brightness(0.92) ;
   }
 
   .main-top{
@@ -77,6 +77,13 @@ main {
 
   .main-bottom {
     font-size: smaller;
+  }
+
+  @media (max-width: 600px) {
+    .main-top {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
 /* Navigation bar styles */
