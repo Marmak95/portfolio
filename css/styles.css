@@ -23,13 +23,8 @@ body {
 .video-container {
     position: relative;
     width: 100%;
-    min-height: 100vh; /* Adjust the height as needed */
-}
-
-@media (max-width: 1150px) {
-  .video-container {
+    min-height: 100vh;
     padding-bottom: 80px;
-  }
 }
 
 .video-container video {
@@ -49,7 +44,7 @@ body {
     z-index: 1;
 }
 
-main {
+.main-content {
   padding: 70px;
   margin: 120px auto 0 auto;
   width: 60%;
@@ -60,10 +55,51 @@ main {
   align-items: center;
   backdrop-filter: blur(6px);
   border: double 3px transparent;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.514), rgba(22, 25, 27, 0.514)), radial-gradient(circle at top left, rgba(129, 180, 199, 0.356),#10131460);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.514), rgba(6, 32, 49, 0.514)), radial-gradient(circle at top left, rgba(129, 180, 199, 0.356),#10131460);
   background-origin: border-box;
   background-clip: padding-box, border-box;
 }
+
+  /* Define the flex item for each row */
+  .about-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%; /* Ensure each row takes up the full width */
+    margin-bottom: 2px; /* Add space between each row */
+  }
+
+  .main-content .about-row:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  /* Define the flex item for the image */
+  .image-left, .image-right {
+    flex: 0 0 auto; /* Make the image take up its natural width */
+    margin: 20px; /* Add space between the image and the paragraph */
+    width: 150px;
+    height: auto;
+    border-radius: 75px;
+    filter:brightness(0.92);
+  }
+
+  /* Define the flex item for the paragraph */
+  .main-content p {
+    flex: 1 1 auto; /* Make the paragraph take up the remaining space */
+  }
+
+  /* Skills Flexbox */
+  .skills-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  .skills-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
   .profile-picture {
     width: 150px;
