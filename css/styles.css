@@ -77,9 +77,9 @@ body {
   .image-left, .image-right {
     flex: 0 0 auto; /* Make the image take up its natural width */
     margin: 20px; /* Add space between the image and the paragraph */
-    width: 150px;
+    width: 14%;
     height: auto;
-    border-radius: 75px;
+    border-radius: 50%;
     filter:brightness(0.92);
   }
 
@@ -93,6 +93,8 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 40px;
+    font-size: smaller;
+    flex-wrap: wrap;
   }
 
   .skills-text {
@@ -129,6 +131,28 @@ body {
       flex-direction: column;
       align-items: center;
     }
+  }
+
+  /* Download button style */
+
+  .download-button {
+    padding: 10px;
+    margin-top: 40px;
+    background-color: rgb(18, 28, 48);
+    color: white;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  .download-button:hover {
+    background-color: rgb(27, 57, 85);
+    cursor: pointer;
+  }
+
+  .download-button img {
+    width: 16px; /* Adjust the width as needed */
+    height: 15px; /* Adjust the height as needed */
+    margin-right: 2px;
   }
 
 /* Navigation bar styles */
