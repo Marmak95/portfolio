@@ -3,10 +3,15 @@ html,
 body {
     margin: 0;
     padding: 0;
-    height: 100%;
     font-family: "Quicksand", sans-serif;
-    font-size: 62.5%;
-    font-size: 20px;
+    font-size: 0.9em;
+}
+
+/* Increase font size for desktops */
+@media (min-width: 768px) {
+  html, body {
+    font-size: 1.1em;
+  }
 }
 
 /* Color palette storage */
@@ -93,8 +98,8 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 40px;
-    font-size: smaller;
     flex-wrap: wrap;
+    margin-bottom: 50px;
   }
 
   .skills-text {
@@ -119,7 +124,7 @@ body {
   }
 
   .name-main-top {
-    font-size: 56px;
+    font-size: 3em;
   }
 
   .main-bottom {
@@ -137,7 +142,6 @@ body {
 
   .download-button {
     padding: 10px;
-    margin-top: 40px;
     background-color: rgb(18, 28, 48);
     color: white;
     border-radius: 20px;
@@ -153,6 +157,25 @@ body {
     width: 16px; /* Adjust the width as needed */
     height: 15px; /* Adjust the height as needed */
     margin-right: 2px;
+  }
+
+  /* Contact info styles */
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .row {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Adjust the gap between icon and text */
+  }
+  
+  .row img {
+    width: 2.5em; /* Set the width of the icons to match the text size */
+    height: 2.5em; /* Set the height of the icons to match the text size */
+    filter: invert(100%);
   }
 
 /* Navigation bar styles */
