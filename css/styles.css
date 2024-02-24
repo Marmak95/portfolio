@@ -14,6 +14,13 @@ body {
   }
 }
 
+/* Decrease font size for smartphones */
+@media (max-width: 768px) {
+  .contact-info {
+    font-size: 0.8em;
+  }
+}
+
 /* Color palette storage */
 :root {
     --rich-black: hsla(218, 89%, 4%, 1);
@@ -50,7 +57,10 @@ body {
 }
 
 .main-content {
-  padding: 10%;
+  padding-left: 6%;
+  padding-right: 6%;
+  padding-top: 50px;
+  padding-bottom: 80px;
   margin: 50px auto 0 auto;
   width: 60%;
   color: white;
