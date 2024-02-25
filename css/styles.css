@@ -210,6 +210,57 @@ body {
     filter: invert(100%);
   }
 
+/* Portfolio content styles */
+
+.portfolio-container {
+  width: 100%;
+  height: 500px;
+  overflow-x: auto;
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  white-space: nowrap;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+}
+
+#portfolio-desc-text {
+  margin-top: -10px;
+}
+
+/* Webkit scrollbar */
+.portfolio-container::-webkit-scrollbar {
+  width: 10px; /* Set scrollbar width */
+}
+
+.portfolio-container::-webkit-scrollbar-track {
+  background-color: var(--gunmetal); /* Set track background color */
+}
+
+.portfolio-container::-webkit-scrollbar-thumb {
+  background-color: var(--air-force-blue-lighter); /* Set thumb color */
+  border-radius: 5px; /* Round the thumb */
+}
+
+/* Firefox scrollbar */
+.portfolio-container {
+  scrollbar-color: var(--air-force-blue-lighter) var(--gunmetal); /* Set thumb and track colors */
+  scrollbar-width: thin; /* Set scrollbar width */
+}
+
+.project {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  text-align: center;
+  scroll-snap-align: center;
+}
+
+.project img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 /* Navigation bar styles */
 
 .nav {
