@@ -39,15 +39,37 @@ body {
     padding-bottom: 80px;
 }
 
-.video-container video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: sepia(100%) hue-rotate(180deg) saturate(200%); /* Video color filter */
+  .video-container video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      filter: sepia(100%) hue-rotate(180deg) saturate(200%); /* Video color filter */
+      transition: opacity 3.0s linear;
+    }
+
+  .video-container video.fade-in {
+    opacity: 1;
   }
+
+.black-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 1;
+  transition: opacity 3.0s linear;
+}
+
+.black-screen.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
 
 /* Content styles */
 
