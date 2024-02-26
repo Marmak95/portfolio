@@ -97,9 +97,11 @@ body {
   background-clip: padding-box, border-box;
 }
 
+/* Main content fit improvement for mobile devices */
 @media (max-width: 768px) {
   .main-content {
     width: 85%;
+    margin: 10px auto 0 auto;
   }
 }
 
@@ -301,7 +303,6 @@ body {
 /* Navigation bar styles */
 
 .nav {
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -310,17 +311,23 @@ body {
   }
   
   .navlinks {
-    position: absolute;
-    left: 50%;
     transform: translateX(-50%);
     display: flex;
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin: auto; /* Center the navlinks horizontally */
+    margin-left: 33%; /* Move the navlinks to the right */
   }
-  
+
   .navlinks li {
-    margin: 0 20px;
+    margin: 0 20px; /* Change the gap between each navlink */
+  }
+
+  /* Decrease gaps between navlinks for mobile devices */
+  @media (max-width: 768px) {
+    .navlinks li {
+      margin: 0 8px;
+    }
   }
 
   /* Active navlink page */
