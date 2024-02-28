@@ -3,6 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Use HTTPS -->
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <!-- Content Security Policy (CSP), protect against XSS attacks -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+    <!-- Prevents clickjacking attacks -->
+    <meta http-equiv="X-Frame-Options" content="deny">
+    <!-- Enables the browser's built-in XSS protection -->
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <!-- Prevents MIME sniffing attacks -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" href="../css/styles.css">
     <title>Markus Blomqvist - Portfolio</title>
@@ -42,7 +52,7 @@
                         </div>
                         <div class="row">
                             <img src="../media/phone_number_icon.png" alt="Phone icon">
-                            <p>+46 0706662873</p>
+                            <p>+46 070-666 28 73</p>
                         </div>
                         <div class="row">
                             <img src="../media/location_icon.png" alt="Location icon">

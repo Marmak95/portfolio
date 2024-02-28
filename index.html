@@ -3,6 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Use HTTPS -->
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <!-- Content Security Policy (CSP), protect against XSS attacks -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+    <!-- Prevents clickjacking attacks -->
+    <meta http-equiv="X-Frame-Options" content="deny">
+    <!-- Enables the browser's built-in XSS protection -->
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <!-- Prevents MIME sniffing attacks -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" href="css/styles.css">
     <title>Markus Blomqvist - Portfolio</title>
@@ -34,7 +44,13 @@
                 <div class="main-content">
                     <div class="main-top">
                         <img src="media/profile_picture.PNG" alt="Profile picture" class="profile-picture">
-                        <h1 class="name-main-top">Markus Blomqvist</h1>
+                        <div class="text-container-col">
+                            <h1 class="name-main-top">
+                                Markus Blomqvist
+                            </h1>
+                            <span id="details-main-top">Recent graduate in Computer Science and Engineering</span>
+                        </div>
+                        
                     </div>
                     <p>Knowledgable and skilled in Computer Science and Engineering, with a profound understanding of programming languages,
                         algorithms, data structures, and software engineering.
