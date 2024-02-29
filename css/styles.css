@@ -14,13 +14,6 @@ body {
   }
 }
 
-/* Decrease font size for smartphones */
-@media (max-width: 768px) {
-  .contact-info {
-    font-size: 0.8em;
-  }
-}
-
 /* Color palette storage */
 :root {
     --rich-black: hsla(218, 89%, 4%, 1);
@@ -36,7 +29,7 @@ body {
     position: relative;
     width: 100%;
     min-height: 100vh;
-    padding-bottom: 80px;
+    padding-bottom: 40px;
 }
 
   .video-container video {
@@ -217,6 +210,13 @@ body {
     flex-direction: column;
   }
   
+  /* Decrease font size for smartphones */
+  @media (max-width: 768px) {
+    .contact-info {
+      font-size: 0.85em;
+    }
+  }
+
   .row {
     display: flex;
     align-items: center;
@@ -375,4 +375,13 @@ body {
     transform-origin: bottom left;
   }
   
-  
+/* Copyright styles */
+
+.copyright {
+  font-size: smaller;
+  color: var(--air-force-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}

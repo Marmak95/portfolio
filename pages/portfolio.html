@@ -6,7 +6,7 @@
     <!-- Use HTTPS -->
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <!-- Content Security Policy (CSP), protect against XSS attacks -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://marmak95.github.io/portfolio/; font-src 'self' https://fonts.gstatic.com/; style-src 'self' https://fonts.googleapis.com/css?family=Quicksand:400,500,700;">
     <!-- Prevents clickjacking attacks -->
     <meta http-equiv="X-Frame-Options" content="deny">
     <!-- Enables the browser's built-in XSS protection -->
@@ -21,7 +21,7 @@
     <div class="video-container">
         <div class="black-screen"></div>
         <video autoplay loop muted playsinline preload="auto" class="fade-out">
-            <source src="../media/main_background_home.mp4" type="video/mp4">
+            <source src="../media/main_background.mp4" type="video/mp4">
         </video>
         <div class="content">
             <!-- Navbar -->
@@ -110,6 +110,13 @@
                     </div>
                 </div>
             </main>
+            
+            <!-- Footer -->
+            <footer>
+                <div class="copyright">
+                    <p>Copyright © 2024 Markus Blomqvist</p>
+                </div>
+            </footer>
 
         </div>
     </div>
