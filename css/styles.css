@@ -436,7 +436,19 @@ body {
   font-size: smaller;
   color: var(--air-force-blue);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-top: 50px;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-bottom: 18px;
+}
+
+.copyright p {
+  margin-bottom: 6px; /* Decrease the gap between the texts */
+}
+
+.copyright a {
+  color: var(--air-force-blue-lighter);
 }
