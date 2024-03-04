@@ -268,7 +268,7 @@ body {
 }
 
 /* Portfolio project styles */
-.project {
+.portfolio-container .project {
   width: 100%;
   height: 100%;
   display: inline-block;
@@ -277,39 +277,94 @@ body {
   padding-bottom: 20px;
 }
 
-.project img {
-  max-width: 50%; /* Set image max-width to 50% */
-  max-height: 100%;
-  height: 400px;
-  object-fit: cover; /* Show the middle of the image, even if the rest on the sides are cut off */
-  filter: grayscale(100%); /* Apply black and white filter */
+/* For screens wider than 1100px */
+@media (min-width: 1100px) {
+  .project-flexbox {
+    display: flex;
+    flex-direction: row; /* Default direction */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .project img {
+    max-width: 50%; /* Set image max-width to 50% */
+    max-height: 100%;
+    height: 400px;
+    object-fit: cover; /* Show the middle of the image, even if the rest on the sides are cut off */
+    filter: grayscale(100%); /* Apply black and white filter */
+  }
+
+  .project-text {
+    flex: 1; /* Take up remaining space */
+    text-align: left; /* Align text to the left */
+    word-wrap: break-word; /* Wrap long words */
+    min-width: 0; /* Ensure text can shrink below its natural width */
+    white-space: normal; /* Wraps the text */
+    padding-left: 20px;
+  }
+
+  .project-text a {
+    color: var(--air-force-blue-lighter);
+  }
+  
+  .project h3 {
+    min-width: 0; /* Ensure text can shrink below its natural width */
+    white-space: normal; /* Wraps the text */
+  }
 }
 
-.project-flexbox {
+/* For screens narrower than 1100px */
+@media (max-width: 1100px) {
+  .project-flexbox {
+    display: flex;
+    flex-direction: column; /* Change direction to column */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .project img {
+    max-width: 100%; /* Set image max-width to 100% */
+    height: auto; /* Allow image height to adjust */
+    filter: grayscale(100%); /* Apply black and white filter */
+  }
+
+  .project-text {
+    flex: 1; /* Take up remaining space */
+    text-align: left; /* Align text to the left */
+    word-wrap: break-word; /* Wrap long words */
+    min-width: 0; /* Ensure text can shrink below its natural width */
+    white-space: normal; /* Wraps the text */
+    padding-left: 0; /* Remove padding */
+  }
+
+  .project-text a {
+    color: var(--air-force-blue-lighter);
+  }
+  
+  .project h3 {
+    min-width: 0; /* Ensure text can shrink below its natural width */
+    white-space: normal; /* Wraps the text */
+  }
+}
+
+.portfolio-links {
   display: flex;
-  flex-direction: row; /* Default direction */
-  flex-wrap: wrap;
-  align-items: flex-start; /* Align items to the start */
-  width: 100%; /* Set width to 100% */
+  flex-direction: column;
 }
 
-.project-text {
-  flex: 1; /* Take up remaining space */
-  text-align: left; /* Align text to the left */
-  word-wrap: break-word; /* Wrap long words */
-  min-width: 0; /* Ensure text can shrink below its natural width */
-  white-space: normal; /* Wraps the text */
-  padding-left: 20px;
-}
+  .portfolio-links .portfolio-row {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Adjust the gap between icon and text */
+  }
 
-.project-text a {
-  color: var(--air-force-blue-lighter);
-}
+  .portfolio-links .portfolio-row img {
+    width: 2.5em; /* Set the width of the icons to match the text size */
+    height: 2.5em; /* Set the height of the icons to match the text size */
+  }
 
-.project h3 {
-  min-width: 0; /* Ensure text can shrink below its natural width */
-  white-space: normal; /* Wraps the text */
-}
+  .portfolio-links .portfolio-row a {
+    color: white;
+  }
 
 /* Navigation bar styles */
 
