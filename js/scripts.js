@@ -23,3 +23,7 @@ video.addEventListener('error', function() {
     // Play the video again
     video.play();
 });
+
+/* Get the year automatically for the copyright text */
+
+document.getElementById("currentYear").textContent = new Date().getFullYear();
