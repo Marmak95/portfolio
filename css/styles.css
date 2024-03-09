@@ -76,7 +76,7 @@ body {
   padding-right: 6%;
   padding-top: 50px;
   padding-bottom: 80px;
-  margin: 50px auto 0 auto;
+  margin: 25px auto 0 auto;
   width: 60%;
   color: white;
   border-radius: 28px;
@@ -240,7 +240,6 @@ body {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   position: relative;
-  -webkit-overflow-scrolling: touch;
 }
 
 #portfolio-desc-text {
@@ -277,8 +276,12 @@ body {
   padding-bottom: 20px;
 }
 
-/* For screens wider than 1100px */
-@media (min-width: 1100px) {
+.project-title {
+  position: relative;
+}
+
+/* For screens wider than 1300px */
+@media (min-width: 1300px) {
   .project-flexbox {
     display: flex;
     flex-direction: row; /* Default direction */
@@ -312,8 +315,8 @@ body {
   }
 }
 
-/* For screens narrower than 1100px */
-@media (max-width: 1100px) {
+/* For screens narrower than 1300px */
+@media (max-width: 1300px) {
   .project-flexbox {
     display: flex;
     flex-direction: column; /* Change direction to column */
@@ -321,8 +324,9 @@ body {
   }
 
   .project img {
-    max-width: 100%; /* Set image max-width to 100% */
-    height: auto; /* Allow image height to adjust */
+    height: 300px; /* Allow image height to adjust */
+    width: 100%;
+    object-fit: cover; /* Show the middle of the image, even if the rest on the sides are cut off */
     filter: grayscale(100%); /* Apply black and white filter */
   }
 
