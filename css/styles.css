@@ -367,7 +367,7 @@ body {
   }
 
   .portfolio-links .portfolio-row a {
-    color: white;
+    color: var(--air-force-blue-lighter);
   }
 
 /* Navigation bar styles */
